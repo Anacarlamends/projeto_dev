@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reserva de Laboratório</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Reservar Laboratório</h1>
+    </header>
+    <main>
+        <button type="button" class="button agendar" id="agendarPessoa">Realizar Reserva</button>
+        <table id="tablePessoa" class="agendar">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Data</th>
+                    <th>Horário</th>
+                    <th>Laboratório</th>
+                    <th>Ação</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+        <div class="dados" id="dados">
+            <div class="dados-content">
+                <header class="dados-header">
+                    <h2>Nova Reserva</h2>
+                    <span class="modal-close" id="modalClose">&#10006;</span>
+                </header>
+                <form id="form" class="modal-form">
+                    <div class="form-block">
+                        <label for="nome" class="modal-label">Nome:</label>
+                        <input type="text" id="nome" name="name" data-index="new" class="modal-field"
+                            placeholder="Ex.: Fernanda Gomes de Oliveira" required>
+                        <span role="alert" id="nameError" aria-hidden="true">
+                            O campo nome deve ser preenchido.
+                        </span>
+                    </div>
+                    <div class="form-block">
+                        <label for="data" class="modal-label">Data:</label>
+                        <input type="date" id="data" name="data" class="modal-field" required>
+                        <span role="alert" id="dataError" aria-hidden="true">
+                            O campo data deve ser preenchido.
+                        </span>
+                    </div>
+                    <div class="form-block">
+                        <label for="horario" class="modal-label">Horários:</label>
+                        <input type="time" id="time" name="time" required>
+                        <span role="alert" id="horarioError" aria-hidden="true">
+                            O campo horário deve ser preenchido.
+                        </span>
+                    </div>
+                    <div class="form-block">
+                        <label for="labs" class="modal-label">Laboratórios:</label>
+                        <select id="labs" name="labs">
+                            <option value="selecione">Selecione</option>
+                            <option value="1">Lab1</option>
+                            <option value="2">Lab2</option>
+                            <option value="3">Lab3</option>
+                            <option value="4">Lab4</option>
+                            <option value="5">Lab5</option>
+                        </select>
+                        <span role="alert" id="salaError" aria-hidden="true">
+                            O campo laboratório deve ser preenchido.
+                        </span>
+                    </div>
+                </form>
+                <footer class="salvar-dados">
+                    <button id="salvar" class="button green">Salvar</button>
+                    <button id="cancelar" class="button blue">Cancelar</button>
+                </footer>
+            </div>
+        </div>
+    </main>
+    <footer>
+    </footer>
+    <script src="/js/script.js"></script>
+</body>
+</html>
